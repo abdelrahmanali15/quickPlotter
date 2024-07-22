@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     style = 'prof'
     pm = PlotManager(style=style)
-    LTR = RawRead("simple_rc_tran.raw")
+    LTR = RawRead("tests\simple_rc_tran.raw")
     # print(LTR.get_trace_names())
     # print(LTR.get_raw_property())
 
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     # pm.add_axis()
 #     del pm
     pm2 = PlotManager(style=style)
-    LTR2 = RawRead("simple_rc_ac.raw")
+    LTR2 = RawRead("tests/simple_rc_ac.raw")
 
     import numpy as np
 
@@ -81,22 +81,22 @@ if __name__ == "__main__":
 
 #     del pm3
     pm4 = PlotManager(style=style)
-    LTR = RawRead("opamp_tran_tb.raw")
-    print(LTR.get_trace_names())
-    print(LTR.get_raw_property())
+    # LTR = RawRead("tests/opamp_tran_tb.raw")
+    # print(LTR.get_trace_names())
+    # print(LTR.get_raw_property())
 
-    out = LTR.get_trace("V(out)")
-    pos = LTR.get_trace("V(pos)")
-    x = LTR.get_trace('time')  # Gets the time axis
+    # out = LTR.get_trace("V(out)")
+    # pos = LTR.get_trace("V(pos)")
+    # x = LTR.get_trace('time')  # Gets the time axis
 
-    pm4.quick_plot(x=[x.get_wave(), x.get_wave()],
-                   y=[pos.get_wave(), out.get_wave()],
-                   x_label="$Time (sec)$",
-                   y_label="$Amplitude (V)$",
-                   title="$Transient\;Analysis$",
-                   legend=['$Vin$', '$Vout@CPAR=500pF$',
-                           '$Vout@CPAR=1nF$', '$Vout@CPAR=1.5nF$'],
-                   y_scale='linear'
-                   )
+    # pm4.quick_plot(x=[x.get_wave(), x.get_wave()],
+    #                y=[pos.get_wave(), out.get_wave()],
+    #                x_label="$Time (sec)$",
+    #                y_label="$Amplitude (V)$",
+    #                title="$Transient\;Analysis$",
+    #                legend=['$Vin$', '$Vout@CPAR=500pF$',
+    #                        '$Vout@CPAR=1nF$', '$Vout@CPAR=1.5nF$'],
+    #                y_scale='linear'
+    #                )
 
     pm4.show_plot()

@@ -86,24 +86,23 @@ class PlotManager:
     def set_style(self, style):
         if style == 'dark':
             plt.style.use(
-                ['dark_background', 'pitayasmoothie-dark.mplstyle'])
+                ['dark_background', 'styles/pitayasmoothie-dark.mplstyle'])
             self.dark_mode = True
         elif style == 'light':
             plt.style.use(
-                ['pitayasmoothie-light.mplstyle'])
+                ['styles/pitayasmoothie-light.mplstyle'])
         elif style == 'pacoty':
             plt.style.use(
-                'pacoty.mplstyle')
+                'styles/pacoty.mplstyle')
         elif style == 'dark2':
-            # mpl_style(dark=True)
             plt.style.use(
-                'dark2.mplstyle')
+                'styles/dark2.mplstyle')
             self.dark_mode = True
-        elif style == 'light2':
+        elif style == 'styles/light2':
             mpl_style(dark=False)
         elif style == 'prof':
             plt.style.use(
-                ['computermodernstyle.mplstyle'])
+                ['styles/computermodernstyle.mplstyle'])
         else:
             plt.style.use(style)
 
