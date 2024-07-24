@@ -5,7 +5,8 @@ from PlotManager import PlotManager
 
 if __name__ == "__main__":
 
-    style = 'prof'
+    # style = 'prof'
+    style = 'dark2'
     pm = PlotManager(style=style)
     LTR = RawRead("tests\simple_rc_tran.raw")
     # print(LTR.get_trace_names())
@@ -26,7 +27,7 @@ if __name__ == "__main__":
                       y=v2.get_wave(step),
                       x_label="$Time (sec)$",
                       y_label="$Amplitude (V)$",
-                      title="$Transient\;Analysis$",
+                      title="$Transient\\;Analysis$",
                       legend=['$Vin$', '$Vout@CPAR=500pF$',
                               '$Vout@CPAR=1nF$', '$Vout@CPAR=1.5nF$'],
                       y_scale='linear'
@@ -55,7 +56,7 @@ if __name__ == "__main__":
                        y=magV2,
                        x_label="$Frequency (Hz)$",
                        y_label="$Gain (dB)$",
-                       title="$AC\;Analysis$",
+                       title="$AC\\;Analysis$",
                        legend=['$CPAR=500pF$',
                                '$CPAR=1nF$', '$CPAR=1.5nF$'],
                        y_scale='linear',
@@ -72,7 +73,7 @@ if __name__ == "__main__":
                        y=phV2,
                        x_label="$Frequency (Hz)$",
                        y_label="$Phase (deg)$",
-                       title="$AC\;Analysis$",
+                       title="$AC\\;Analysis$",
                        legend=['$CPAR=500pF$',
                                '$CPAR=1nF$', '$CPAR=1.5nF$'],
                        y_scale='linear',
@@ -93,7 +94,7 @@ if __name__ == "__main__":
                    y=[pos.get_wave(), out.get_wave()],
                    x_label="$Time (sec)$",
                    y_label="$Amplitude (V)$",
-                   title="$Transient\;Analysis$",
+                   title="$Transient\\;Analysis$",
                    legend=['$Vin$', '$Vout@CPAR=500pF$',
                            '$Vout@CPAR=1nF$', '$Vout@CPAR=1.5nF$'],
                    y_scale='linear'

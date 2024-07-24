@@ -53,10 +53,11 @@ class BlitManager:
 
 class PlotManager:
     def __init__(self, style='default', figsize=None):
+        self.dark_mode = False
         self.set_style(style)
         self.figsize = figsize
         self.fig = plt.figure(figsize=self.figsize)
-        self.dark_mode = False
+
         self.axes = []
         self.current_ax = self.fig.add_subplot(111)
         self.axes.append(self.current_ax)
@@ -469,7 +470,7 @@ class PlotManager:
                 bbox=dict(boxstyle="round,pad=0.3", fc="#FFFFE0",
                           ec="#A9A9A9", lw=0.5, alpha=1),
                 zorder=5)
-            self.intersection_annotations.append(annotation)
+        self.intersection_annotations.append(annotation)
         self.blit_manager.add_artist(annotation)
 
     def clear_annotations_and_dots(self):
